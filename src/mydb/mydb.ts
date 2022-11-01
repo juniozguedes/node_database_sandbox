@@ -1,4 +1,5 @@
-export default class MyDb {
+class MyDb {
+  db: Map<any, any>;
   constructor() {
     this.db = new Map();
   }
@@ -12,8 +13,8 @@ export default class MyDb {
     this.db.set(tableName, new Map());
   }
 
-  addEntity(db, tableId, entityId, data) {
-    const table = this.db.get(tableName).set("data", data);
+  addEntity(db, tableId, data) {
+    const table = this.db.get(tableId).set("data", data);
     return true;
     //addEntity(db, 't', 'i', { attrId: 'attrValue' }); // => db with new entity of id "i" and body {attrId: "attrValue"}
   }
