@@ -13,7 +13,7 @@ export default class MyDb {
     this.db.set();
   }
 
-  addEntity() {
+  addEntity(db, tableId, entityId, data) {
     return true;
     //addEntity(db, 't', 'i', { attrId: 'attrValue' }); // => db with new entity of id "i" and body {attrId: "attrValue"}
   }
