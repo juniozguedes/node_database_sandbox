@@ -9,12 +9,12 @@ export default class MyDb {
       return false;
     }
 
-    db.set(tableName, { id: tableName, headers:{""} });
+    db.set(tableName, { id: tableName, headers: {} });
     this.db.set();
   }
 
-  addEntity(){
-    return true
+  addEntity() {
+    return true;
     //addEntity(db, 't', 'i', { attrId: 'attrValue' }); // => db with new entity of id "i" and body {attrId: "attrValue"}
   }
 }
