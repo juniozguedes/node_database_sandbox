@@ -9,11 +9,11 @@ export default class MyDb {
       return false;
     }
 
-    db.set(tableName, { id: tableName, headers: {} });
-    this.db.set();
+    this.db.set(tableName, new Map());
   }
 
   addEntity(db, tableId, entityId, data) {
+    const table = this.db.get(tableName).set("data", data);
     return true;
     //addEntity(db, 't', 'i', { attrId: 'attrValue' }); // => db with new entity of id "i" and body {attrId: "attrValue"}
   }
