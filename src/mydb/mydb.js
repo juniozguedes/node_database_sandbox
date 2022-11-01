@@ -3,12 +3,18 @@ export default class MyDb {
     this.db = new Map();
   }
 
-  setTable(name) {
+  addTable(tableName) {
     //check if table already exists
-    if (this.db.has("apples")) {
+    if (this.db.has(tableName)) {
       return false;
     }
-    db.set("apples", { color: "red", good: "yes" });
+
+    db.set(tableName, { id: tableName, headers:{""} });
     this.db.set();
+  }
+
+  addEntity(){
+    return true
+    //addEntity(db, 't', 'i', { attrId: 'attrValue' }); // => db with new entity of id "i" and body {attrId: "attrValue"}
   }
 }
