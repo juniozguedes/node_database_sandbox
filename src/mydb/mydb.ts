@@ -1,4 +1,4 @@
-class MyDb {
+export class MyDb {
   db: Map<any, any>;
   constructor() {
     this.db = new Map();
